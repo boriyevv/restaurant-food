@@ -1,0 +1,11 @@
+components:
+  schemas:
+    CategoryModel:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          description: book title
+        

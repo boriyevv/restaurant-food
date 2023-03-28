@@ -1,0 +1,14 @@
+/category:
+  get:
+      tags:
+          - Category
+      summary: Get category
+      responses:
+        200:
+          description: Get all category 
+          content:
+            application/json:
+              schema:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/CategoryModel'

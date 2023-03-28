@@ -1,0 +1,32 @@
+components:
+  schemas:
+    FoodModel:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+          description: food name
+        price:
+          type: string
+          description: food price
+        image:
+          type: string
+          description: food image
+        bowls:
+          type: string
+          description: food aviable bowls
+    PostFoodModel:
+      type: object
+      properties: 
+        name:
+          type: string
+        price:
+          type: string
+        image:
+          type: string
+        bowls:
+          type: string
+        category_id:
+          type: integer

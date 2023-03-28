@@ -1,0 +1,117 @@
+/food/{categoryId}:
+  get:
+    tags:
+      - Food
+    summary: Get the Food by category id
+    parameters:
+      - in: path
+        name: categoryId
+        schema:
+          type: string
+        required: true
+        description: The category id
+    responses:
+      200:
+        description: The food description by id
+        contents:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/FoodModel"
+# /food/{foodId}:
+#   put:
+#       tags:
+#         - Food
+#       summary: update food
+#       consumes:
+#       - multipart/form-data
+#       parameters:
+#         - in: path
+#           name: foodId
+#           schema:
+#             type: string
+#           required: true
+#           description: The book id
+#         - name: name
+#           in: formData
+#           description: The food name
+#           required: true
+#           type: string
+#         - name: price
+#           in: formData   # <-----
+#           description: The food price
+#           required: true
+#           type: string
+#         - name: bowls
+#           in: formData   # <-----
+#           description: The food avilable bowls
+#           required: true
+#           type: string
+#         - name: category_id
+#           in: formData   # <-----
+#           description: The category id
+#           required: true
+#           type: number
+#         - name: food_img
+#           in: formData   # <-----
+#           description: The uploaded image
+#           required: true
+#           type: file
+#       responses:
+#         200:
+#           description: The new food
+#           contents:
+#             application/json:
+#               schema:
+#                 type: array
+#                 items:
+#                   $ref: '#/components/schemas/PostFoodModel'
+
+# /food:
+#     post:
+#       tags:
+#         - Food
+#       summary: Add a new food
+#       consumes:
+#       - multipart/form-data
+#       parameters:
+#         - name: name
+#           in: formData
+#           description: The food name
+#           required: true
+#           type: string
+#         - name: price
+#           in: formData   # <-----
+#           description: The food price
+#           required: true
+#           type: string
+#         - name: bowls
+#           in: formData   # <-----
+#           description: The food avilable bowls
+#           required: true
+#           type: string
+#         - name: category_id
+#           in: formData   # <-----
+#           description: The category id
+#           required: true
+#           type: number
+#         - name: food_img
+#           in: formData   # <-----
+#           description: The uploaded image
+#           required: true
+#           type: file
+#       responses:
+#         200:
+#           description: The new food
+#           contents:
+#             application/json:
+#               schema:
+#                 type: array
+#                 items:
+#                   $ref: '#/components/schemas/PostFoodModel'
+
+# name
+# price
+# bowls
+# const GET_CATEGORY_BY_ID = `
